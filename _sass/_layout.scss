@@ -2,9 +2,10 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    // border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    // min-height: 56px;
+    min-height: 80px;
+    background: $brand-color;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -95,9 +96,60 @@
 #eb-nav {
     margin-left: 2em;
 }
+
 .navbar {
     margin-bottom: 0;
+    min-height: 65px;
+
+    .container {
+
+        .navbar-header {
+            height: 65px;
+
+            .navbar-toggle {
+                margin: 24px 15px 24px 0;
+                .icon-bar {
+                    background-color: $brand-white;
+                    height: 3px;
+                }
+            }
+            .navbar-brand {
+                padding-top: 5px;
+            }
+        }
+
+        .navbar-collapse {
+            @include media-query($on-palm) {
+                clear: both;
+            }
+            .navbar-nav {
+                li {
+                    a {
+                        color: $brand-white;
+                    }
+                }
+            }
+        }
+    }
 }
+
+#ribbon {
+
+    .row .col-md-4 h2 {
+        margin-top: .5em;
+    }
+
+    #middle {
+        border-left: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+    }
+
+}
+
+.divider-right {
+    border-right: 1px solid #aaa;
+}
+
 
 /**
  * Carousel
@@ -106,11 +158,34 @@
     max-height: 50vh;
     margin-bottom: 40px;
     overflow: hidden;
+
+    @include media-query($on-palm) {
+        height: 50vh;
+    }
+
+}
+
+.carousel-inner {
+    height: 100%;
+
+    .item {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
 }
 
 .carousel-caption {
     top: 15%;
     bottom: auto;
+
+    @include media-query($on-palm) {
+        top: 10%;
+    }
+
 }
 
 

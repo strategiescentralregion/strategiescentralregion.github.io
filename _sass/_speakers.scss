@@ -1,0 +1,26 @@
+/**
+ * specific formatting for speakers page
+ */
+
+.speaker-bio {
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 20px;
+
+	h3 {
+		line-height: 24px;
+		padding: 10px 0;
+	}
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+
+	img {
+		float: right;
+	}
+
+	p {
+		clear: both;
+	}
+
+}

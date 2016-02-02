@@ -11,7 +11,7 @@ email: aventura@icfs.org
 description: > # this means to ignore newlines until "baseurl:"
   Strategies is hosting a convening to discuss practices for bulding resilience to adverse childhood experiences and trauma.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.c8om" # the base hostname & protocol for your site
+url: "http://localhost" # the base hostname & protocol for your site
 twitter_username: strategiesca
 github_username: 
 

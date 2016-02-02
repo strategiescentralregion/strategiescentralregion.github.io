@@ -1,0 +1,14 @@
+---
+layout: page
+title: Speakers
+permalink: /speakers/
+---
+
+	{% for speaker in site.data.speakers %}
+		<section class="speaker-bio">
+			<h3>{{ speaker.name }} </h3>
+			<img src="//assets/img/{{ speaker.img }}" />
+
+			<p>{{ speaker.bio }}</p>
+		</section>
+	{% endfor %}

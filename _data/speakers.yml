@@ -1,20 +1,31 @@
 - name: Elaine Miller-Karas
-  org: 
-  bio: 
+  org: Trauma Resource Institute
+  org-url: http://traumaresourceinstitute.com
+  bio: > #
+    Sed hendrerit. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Sed in libero ut nibh placerat accumsan.
+    Ut varius tincidunt libero. Ut id nisl quis enim dignissim sagittis. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+  img: emk.jpg
   website: 
   twitter: 
   email: 
 
 - name: Carol Redding
   org: 
-  bio: 
+  org-url: 
+  bio: > #
+    Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Etiam iaculis nunc ac metus.
+    Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Proin magna.
+  img: cr.jpg
   website: 
   twitter: 
   email: 
 
 - name: Jane Stevens
   org: 
-  bio: 
+  org-url: 
+  bio: > #
+    Cras non dolor. Vivamus euismod mauris. Nunc nulla. Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros.
+  img: js.jpg
   website: 
   twitter: 
   email: 
