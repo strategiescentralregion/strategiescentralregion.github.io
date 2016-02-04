@@ -15,7 +15,7 @@
     font-size: 26px;
     font-weight: 300;
     // line-height: 56px;
-    letter-spacing: -1px;
+    // letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
 
@@ -123,9 +123,13 @@
                 clear: both;
             }
             .navbar-nav {
+                margin-top: 15px;
                 li {
                     a {
                         color: $brand-white;
+                    }
+                    &.active a {
+                        color: $brand-yellow;
                     }
                 }
             }
@@ -134,22 +138,27 @@
 }
 
 #ribbon {
-
+    @include media-query($on-palm) {
+        & .row a > div.lsa {
+            margin-bottom: 20px;
+            border-bottom: 1px solid $grey-color-light;
+        }
+    }
     .row .col-md-4 h2 {
         margin-top: .5em;
     }
 
-    #middle {
+
+    .middle {
         border-left: 1px solid #aaa;
         border-right: 1px solid #aaa;
+        @include media-query($on-palm) {
+            border-left: 0;
+            border-right: 0;
+        }
     }
 
 }
-
-.divider-right {
-    border-right: 1px solid #aaa;
-}
-
 
 /**
  * Carousel
@@ -188,7 +197,11 @@
 
 }
 
-
+#latest-updates {
+    color: $brand-orange;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 /**
  * Site footer
@@ -196,6 +209,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background: darken($brand-color, 10%);
 }
 
 .footer-heading {
@@ -211,7 +225,7 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    color: $grey-color-light;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
