@@ -1,8 +1,15 @@
-- text: Location
-  url: /location/
 - text: Speakers
   url: /speakers/
 - text: Topics
   url: /topics/
 - text: Resources
   url: /resources/
+- text: About
+  url: /about/
+  subnav:
+    - subtext: Location
+      suburl: /location/
+      parent: /about/
+    - subtext: Contact
+      suburl: /contact/
+      parent: /about/

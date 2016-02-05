@@ -16,10 +16,20 @@
 				<ul class="nav navbar-nav navbar-right">
 					{% assign url = page.url|remove:'index.html' %}
 					{% for link in site.data.navigation %}
-					<li {% if url == link.url %}class="active"{% endif %}>
-						<a href="{{link.url}}" title="{{link.title}}">{{ link.text }}</a>
-					</li>
-					{% endfor %}
+					{% if link.subnav != null %}
+					<li class="dropdown {% if url == link.url %}active{% endif %}">
+						<a href="{{link.url}}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">{{ link.text }} <i class="fa fa-angle-down"></i></a>
+							<ul class="dropdown-menu">
+								{% for subnav in link.subnav %}
+									<li class="{% if url == subnav.suburl %}active{% endif %}"><a href="{{ subnav.suburl }}">{{ subnav.subtext }}</a></li>
+								{% endfor %}
+							</ul>
+							{% else %}
+							<li {% if url == link.url %}class="active"{% endif %}>
+								<a href="{{ link.url }}" title="{{ link.title }}">{{ link.text }}</a>
+							{% endif %}
+							</li>
+							{% endfor %}
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->

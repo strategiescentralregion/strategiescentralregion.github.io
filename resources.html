@@ -1,0 +1,39 @@
+---
+title: Resources
+permalink: /resources
+layout: gallery
+---
+
+<h2>{{ page.title }}</h2>
+
+<ul class="resource-list">
+{% for pdf in site.data.pdfs %}
+	<a href="/static_files/pdfs/{{ pdf.url }}"><li class="resource">
+		<h3>{{ pdf.title }}</h3>
+		<img src="/assets/img/{{ pdf.img }}" />
+		<p>{{ pdf.description }}</p>
+	</li></a>
+{% endfor %}
+
+
+
+<!-- markdown sample
+ !
+ !
+## {{ page.title }} ##
+
+#### PDFs ####
+[A PDF][1]
+
+[Another PDF][2]
+
+#### Other Stuff ####
+[A Stuff][3]
+
+
+[1]: https://www.google.com/ "The Goog"
+[2]: http://www.kittenwar.com/ "PLEASE CLICK"
+[3]: http://zombo.com/ "PLEASE DO NOT CLICK"
+ !
+ !
+ -->
