@@ -1,0 +1,22 @@
+#ribbon {
+    @include media-query($on-palm) {
+        & .row a > div.lsa {
+            margin-bottom: 20px;
+            border-bottom: 1px solid $grey-color-light;
+        }
+    }
+    .row .col-md-4 h2 {
+        margin-top: .5em;
+    }
+
+
+    .middle {
+        border-left: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+        @include media-query($on-palm) {
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+
+}

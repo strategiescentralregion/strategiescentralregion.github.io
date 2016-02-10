@@ -94,12 +94,16 @@
 }
 
 #eb-nav {
-    margin-left: 2em;
+    margin: 25px 0 0 16px;
+    @include media-query($on-laptop) {
+        margin-top: 20px;
+    }
 }
 
 .navbar {
     margin-bottom: 0;
     min-height: 65px;
+    font-size: $base-font-size * 1.25;
 
     .container {
 
@@ -123,7 +127,7 @@
                 clear: both;
             }
             .navbar-nav {
-                margin-top: 15px;
+                margin-top: 28px;
                 li {
                     a {
                         color: $brand-white;
@@ -167,30 +171,6 @@
 // .dropdown-menu > .active > a {
 //    background-color: transparent;
 // } */
-
-
-#ribbon {
-    @include media-query($on-palm) {
-        & .row a > div.lsa {
-            margin-bottom: 20px;
-            border-bottom: 1px solid $grey-color-light;
-        }
-    }
-    .row .col-md-4 h2 {
-        margin-top: .5em;
-    }
-
-
-    .middle {
-        border-left: 1px solid #aaa;
-        border-right: 1px solid #aaa;
-        @include media-query($on-palm) {
-            border-left: 0;
-            border-right: 0;
-        }
-    }
-
-}
 
 /**
  * Carousel
@@ -239,9 +219,16 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-    background: darken($brand-color, 10%);
+    // border-top: 1px solid $grey-color-light;
+    padding: 0 0 $spacing-unit * .5;
+    // background: darken($brand-color, 10%);
+    .wrapper {
+        border-top: 1px solid #aaa;
+        padding-top: 30px;
+        > h3 {
+            color: $brand-white;
+        }
+    }
 }
 
 .footer-heading {
@@ -257,9 +244,27 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color-light;
+    color: $brand-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
+    * {
+        display: inline-block;
+    }
+    > a {
+        display: inline-block;
+    }
+    > ul {
+        list-style-type: none;
+        margin: 4px 0;
+        li {
+            display: inline-block;
+            padding: 0 10px;
+            a {
+                color: $brand-color;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .footer-col {
@@ -304,9 +309,8 @@
     }
 }
 span.username {
-    color: $grey-color-light;
+    color: $brand-color;
 }
-
 
 
 /**
