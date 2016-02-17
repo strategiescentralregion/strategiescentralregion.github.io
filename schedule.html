@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: /schedule/
+title: Schedule
+---
+
+<div class="row" id="schedule-head">
+	<div class="col-md-3 col-sm-4 col-xs-4">
+		<h3>Time</h3>
+	</div>
+	<div class="col-md-3 hidden-sm hidden-xs">
+		<h3>Speaker</h3>
+	</div>
+	<div class="col-md-6 col-sm-8 col-xs-8">
+		<h3>Topic</h3>
+	</div>
+</div>
+{% for item in site.data.schedules %}
+<div class="row" id="schedule-row">
+	<div class="col-md-3 col-sm-4 col-xs-4">
+		<p>{{ item.time }}</p>
+	</div>
+	<div class="col-md-3 hidden-sm hidden-xs">
+		<p>{{ item.speaker }}{% if item.title != null %}, <em>{{ item.title }}</em>{% endif %}</p>
+	</div>
+	<div class="col-md-6 col-sm-8 col-xs-8">
+		{% if item.topic == "Break" or item.topic == "Lunch Break" or item.topic == "Afternoon Break" %}
+			<p><em>{{ item.topic }}</em></p>
+		{% else %}
+			<p>{{ item.topic }}</p>
+		{% endif %}
+	</div>
+</div>
+{% endfor %}

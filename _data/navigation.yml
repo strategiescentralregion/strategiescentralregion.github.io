@@ -1,7 +1,7 @@
-- text: Speakers
-  url: /speakers/
-- text: Topics
-  url: /topics/
+- text: Schedule
+  url: /schedule/
+- text: News
+  url: /news/
 - text: Resources
   url: /resources/
 - text: About
@@ -13,3 +13,8 @@
     - subtext: Contact
       suburl: /contact/
       parent: /about/
+    - subtext: Speakers
+      suburl: /speakers/
+      parent: /about/
+    - subtext: Topics
+      suburl: /topics/

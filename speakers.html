@@ -9,6 +9,11 @@ permalink: /speakers/
 			<h3>{{ speaker.name }} </h3>
 			<img src="//assets/img/{{ speaker.img }}" />
 
-			<p>{{ speaker.bio }}</p>
+			{% for line in speaker.bio %}
+			<p>{{ line.p1 }}</p>
+			<p>{{ line.p2 }}</p>
+			<p>{{ line.p3 }}</p>
+			<p>{{ line.p4 }}</p>
+			{% endfor %}
 		</section>
 	{% endfor %}

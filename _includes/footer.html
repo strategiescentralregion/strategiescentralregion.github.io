@@ -2,18 +2,28 @@
 
   <div class="wrapper">
     <div class="footer-col-wrapper">
-        <ul class="footer-nav">
-        {% for link in site.data.navigation %}
-          <li><a href="{{link.url}}">{{link.text}}</a></li>
-        {% endfor %}
-        </ul>
-          <div class="pull-right">
-          {% include icon-twitter.html %}
-          {% include icon-facebook.html %}
+      <ul class="footer-nav">
+        <small class="hidden-md hidden-lg">Navigation</small>
+       {% for link in site.data.navigation %}
+         <li><a href="{{link.url}}">{{link.text}}</a></li>
+         {% if link.subnav != null %}
+           {% for subnav in link.subnav %}
+             <li><a href="{{subnav.suburl}}">{{subnav.subtext}}</li></a>
+             {% endfor %}
+             {% endif %}
+       {% endfor %}
+      </ul>
+        <div>
+          <small class="hidden-md hidden-lg">Social</small><br class="hidden-lg hidden-md">
+          <div>
+            {% include icon-twitter.html %}
+            {% include icon-facebook.html %}
+          </div>
         </div>
-      </div>
     </div>
-
+    <div class="row">
+      <p><small>Strategies Central Region | 4001 Mission Oaks Blvd, Suite I, Camarillo, CA 93012 | (805) 485-6114</small></p>
+    </div>
   </div>
 
 </footer>

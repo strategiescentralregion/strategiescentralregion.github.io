@@ -1,12 +1,17 @@
 // of course, all this styling isn't really worth much if there're only like two necessary documents.
 .resource-list {
 	list-style-type: none;
-	columns: 3;
-	-webkit-columns: 3;
-	
+	margin: 0;
 	li {
-		display: inline-block;
-		border: 1px solid $grey-color-light;
-		
+		display: block;
+		margin: 10px 0 20px;
+		h4 {
+			margin-bottom: 5px;
+		}
+		p {
+			margin: 5px 0;
+		}
+		a {
+		}
 	}
 }

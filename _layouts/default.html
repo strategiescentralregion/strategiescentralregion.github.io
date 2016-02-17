@@ -10,12 +10,18 @@
       <div class="page-content">
         <div class="wrapper">
           <div class="container-fluid">
+            {% if page.header != null %}
+              <div class="row pagehead">
+                <img src="/assets/img/{{page.header}}">
+              </div>
+            {% endif %}
             <div class="row">
+              <div class="col-md-3">
+                {% include sidebar.html %}
+                {% include eventbrite-widget.html %}
+              </div>
               <div class="col-md-9">
               {{ content }}
-              </div>
-              <div class="col-md-3">
-                {% include sidebar.html %} 
               </div>
             </div>
           </div>

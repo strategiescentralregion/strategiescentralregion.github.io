@@ -1,22 +1,65 @@
 #ribbon {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-dark;
     @include media-query($on-palm) {
-        & .row a > div.lsa {
+        & .row > div.lsa {
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-weight: bold;
             border-bottom: 1px solid $grey-color-light;
+            p {
+                margin: 10px auto;
+            }
         }
     }
-    .row .col-md-4 h2 {
-        margin-top: .5em;
+    > .row {
+        padding: 0 30px;
+    }
+    .row .col-md-3  {
+        border-right: 1px solid $grey-color-dark;
+        > a {
+            text-decoration: none;
+        }
+        &:last-of-type {
+            border-right: none;
+        }
+        h3 {
+            margin-top: .5em;
+            color: $brand-color;
+            &::after {
+                content: " >";
+                opacity: 0;
+                transition: 300ms;
+                @include media-query($on-palm) {
+                    display: none;
+                }
+            }
+            &:hover {
+                &::after {
+                    @media screen and (min-width: 960px) {
+                        opacity: 1;
+                        transition: 300ms;
+                    }
+                }
+            }
+        }
     }
 
-
     .middle {
-        border-left: 1px solid #aaa;
-        border-right: 1px solid #aaa;
+    //      border-left: 1px solid $grey-color-dark;
+    //      border-right: 1px solid $grey-color-dark;
         @include media-query($on-palm) {
             border-left: 0;
             border-right: 0;
         }
     }
-
+    > div:nth-of-type(2) {
+        div {
+            padding-top: 10px;
+            a {
+                font-weight: bold;
+                color: $brand-orange;
+            }
+        }
+    }
 }

@@ -1,16 +1,17 @@
 ---
 title: Resources
 permalink: /resources
-layout: gallery
+layout: default
 ---
 
 <h2>{{ page.title }}</h2>
 
 <ul class="resource-list">
-{% for pdf in site.data.pdfs %}
-	<a href="/static_files/pdfs/{{ pdf.url }}"><li class="resource">
-		<h3>{{ pdf.title }}</h3>
-		<img src="/assets/img/{{ pdf.img }}" />
-		<p>{{ pdf.description }}</p>
-	</li></a>
+{% for doc in site.data.docs %}
+	<li class="resource">
+		<h4>{{ doc.title }}</h4>
+		<p>{{ doc.description }}</p>
+		<a href="/assets/docs/{{ doc.url }}">Download {{ doc.title }} ({{doc.ext }}) <i class="fa fa-external-link"></i></a>
+	</li>
 {% endfor %}
+</ul>

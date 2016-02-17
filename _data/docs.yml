@@ -1,12 +1,15 @@
 - title: Important Report
   url: 1.pdf
   img: pdf1.jpg
+  ext: pdf
   description: This report is critical! And crucial. Also salient, and vital.
 - title: Important PowerPoint
-  url: 2.pdf
-  img: pdf2.png
+  url: 2.ppt
+  img: ppt1.png
+  ext: ppt
   description: This is a very essential PowerPoint!
 - title: Unimportant Document
-  url: 3.pdf
-  img: pdf3.png
+  url: 2.pdf
+  img: pdf2.png
+  ext: pdf
   description: This one isn't very important at all. In fact, you could probably not even read it and be fine.
