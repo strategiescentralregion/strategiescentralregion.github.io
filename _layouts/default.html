@@ -8,19 +8,18 @@
     {% include header.html %}
 
       <div class="page-content">
+        {% include page-header.html %}
         <div class="wrapper">
           <div class="container-fluid">
-            {% if page.header != null %}
-              <div class="row pagehead">
-                <img src="/assets/img/{{page.header}}">
-              </div>
-            {% endif %}
             <div class="row">
               <div class="col-md-3">
                 {% include sidebar.html %}
                 {% include eventbrite-widget.html %}
               </div>
               <div class="col-md-9">
+                {% if page.header == null %}
+                  <h1>{{ page.title }}</h1>
+                {% endif %}
               {{ content }}
               </div>
             </div>

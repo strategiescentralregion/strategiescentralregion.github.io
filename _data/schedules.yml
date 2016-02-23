@@ -1,34 +1,35 @@
-- topic: Registration & Continental Breakfast
-  speaker: Strategies Team, Steering Committee
-  time: 8:00 - 9:00am
-- topic: Opening Remarks
-  speaker: Angela Ponivas
-  title: OCAP Bureau Chief
-  time: 9:00 - 9:20am
-- topic: Adverse Childhood Experiences Intro
-  speaker: Carol Redding
-  time: 9:20 - 10:30am
-- topic: Break
+- topic: Registration, Networking, & Continental Breakfast
   speaker: 
-  time: 10:30 - 10:45am
-- topic: Main Thing First Half
-  speaker: Elaim Miller-Karas
+  time: 8:00 - 9:00am
+- topic: Welcome & Opening Remarks
+  speaker: Angela Ponivas
+  title: Office of Child Abuse Prevention Bureau Chief
+  time: 9:00 - 9:20am
+- topic: ACEs and Trauma - Research, Impact, and Learnings from the Field
+  speaker: Carol Redding
+  title: Former ACE Study Fellow, Speaker, Trainer
+  time: 9:20 - 10:30am
+# - topic: Break
+#   speaker: 
+#  time: 10:30 - 10:45am
+- topic: Building Resilience to Trauma
+  speaker: Elaine Miller-Karas
+  title: Executive Director, Trauma Resource Center; Author
   time: 10:45 - 12:00pm
 - topic: Hosted Lunch
   speaker: 
   time: 12:00 - 12:45pm
-- topic: Main Thing Second Half
+- topic: Building Resilience to Trauma, Part 2
   speaker: Elaine Miller-Karas
+  title: 
   time: 12:45 - 2:00pm
-- topic: Afternoon Break
-  speaker: 
-  time: 2:00 - 2:15pm
-- topic: Jane Speaks About Stuff
+# - topic: Afternoon Break
+#   speaker: 
+#   time: 2:00 - 2:15pm
+- topic: Platforms for Building Resiliency to ACEs
   speaker: Jane Stevens
+  title: Founder, ACEs Connection & ACEs Too High
   time: 2:15 - 3:00pm
-- topic: Group Discussion
-  speaker: Strategies Team
-  time: 3:00 - 3:45pm
-- topic: Closing Remarks
-  speaker: Steering Committee
-  time: 3:45 - 4:00pm
+- topic: Group Discussion & Closing Remarks
+  speaker: 
+  time: 3:00 - 4:00pm

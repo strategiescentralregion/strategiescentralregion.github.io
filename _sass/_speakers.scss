@@ -4,11 +4,18 @@
 
 .speaker-bio {
 	border-bottom: 1px solid #aaa;
-	padding-bottom: 20px;
-
-	h3 {
+	padding: 20px 0;
+	> div {
+		padding: 10px 0;
+	}
+	h1 {
 		line-height: 24px;
 		padding: 20px 0 10px;
+		width: 50%;
+		@include media-query($on-palm) {
+			width: 100%;
+			float: left;
+		}
 	}
 
 	&:last-of-type {
@@ -17,10 +24,36 @@
 
 	img {
 		float: right;
+		max-height: 220px;
+		margin: 15px 0 10px;
+		padding: 0 20px;
+		@include media-query($on-palm) {
+			max-width: 40%;
+			clear: left;
+		}
 	}
 
 	p {
-		clear: both;
+		// clear: both;
 	}
-
+	span {
+		display: inline-block;
+		font-weight: bold;
+	}
+	.org-list {
+		list-style-type: none;
+		display: inline-block;
+		margin-left: 20px;
+		li {
+			display: inline-block;
+			&::after {
+				content: ", ";
+			}
+			&:last-of-type {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
 }

@@ -1,42 +1,34 @@
 <div id="main-carousel" class="carousel slide" data-ride="carousel">
 	<!-- indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#main-carousel" data-slide-to="1"></li>
-				<li data-target="#main-carousel" data-slide-to="2"></li>
-			</ol>
-			
-			<!-- Wrapper for Slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img src="http://lorempixel.com/1920/1080/city/3" alt="slide 1" width="100%">
+		<ol class="carousel-indicators">
+			{% for slide in site.data.slides %}
+			<li data-target="#main-carousel" data-slide-to="{{ forloop.index }}" class="active"></li>
+			{% endfor %}
+		</ol>
+
+		<!-- Wrapper for Slides -->
+		<div class="carousel-inner" role="listbox">
+			{% for slide in site.data.slides %}
+				<div class="item {% if forloop.first == true %}active{% endif %}">
+					<img src="/assets/img/{{ slide.img }}" alt="{{ slide.alt }}" width="100%">
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>Tickets Now Available!</h1>
+							<h1>{{ slide.h1 }}</h1>
+							<p>{{ slide.p }}</p>
+						{% if forloop.first == true %}
 							<a href="http://www.eventbrite.com/e/trauma-informed-care-conference-tickets-19846102226?ref=ebtnebregn" target="_blank" ><img src="https://www.eventbrite.com/custombutton?eid=19846102226" alt="Eventbrite - Trauma Informed Care Conference" /></a>
+						{% else %}
+							<a href="{{ slide.url }}" class="btn btn-primary">{% if slide.a == null %}
+								Learn More &gt;
+								{% else %}
+								{{ slide.a }}
+								{% endif %}
+							</a>
+						{% endif %}
 						</div>
 					</div>
 				</div>
-				<div class="item">
-					<img src="http://lorempixel.com/1920/1080/business/4" alt="slide 2" width="100%">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>Keynote Speaker Announced</h1>
-            <p>Learn from the leaders in Trauma-Informed Care.</p>
-            <a href="#" class="btn btn-primary">See Speakers</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="http://lorempixel.com/1920/1080/abstract/3" alt="slide 3" width="100%">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>Resilience Topics</h1>
-            <p>Get a lowdown on our topics of interest.</p>
-            <a href="#" class="btn btn-primary">See topics</a>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 
 			<!-- Controls -->
@@ -49,3 +41,4 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div><!-- /.main-carousel -->
+

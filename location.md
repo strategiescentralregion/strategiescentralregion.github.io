@@ -2,10 +2,10 @@
 title: Location
 permalink: /location/
 layout: default
+header: location.jpg
 ---
-## {{ page.title }} ##
 
-DoubleTree by Hilton, Modesto  
+__DoubleTree by Hilton, Modesto__  
 1150 9th St.  
 Modesto, CA 95354
 
