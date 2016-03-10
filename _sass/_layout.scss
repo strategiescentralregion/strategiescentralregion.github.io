@@ -376,7 +376,9 @@ p.lead + p {
         }
     }
 }
-
+#logo-foot {
+    max-width: 300px;
+}
 .footer-col {
     float: left;
     margin-bottom: $spacing-unit / 2;
