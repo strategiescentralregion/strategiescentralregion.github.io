@@ -278,7 +278,7 @@ p.lead + p {
     // background: darken($brand-color, 10%);
     .wrapper {
         border-top: 1px solid #ddd;
-        padding-top: 30px;
+        padding-top: 20px;
         > h3 {
             color: $brand-white;
         }
@@ -319,7 +319,7 @@ p.lead + p {
     }
     > ul {
         list-style-type: none;
-        margin: 0;
+        margin: 0 0 20px;
         padding: 0;
         @include media-query($on-palm) {
             margin: 0 auto;
@@ -357,7 +357,9 @@ p.lead + p {
         }
     }
     > div {
-        float: right;
+        @include media-query($on-palm) {
+            float: right;
+        }
         > small {
             font-weight: bold;
             color: $brand-orange;
@@ -376,8 +378,31 @@ p.lead + p {
         }
     }
 }
+#foot-icons {
+    float: left;
+    @include media-query($on-palm) {
+        float: right;
+    }
+}
+#foot-text {
+    color: #424242;
+    margin-left: 15px;
+    @include media-query($on-palm) {
+        margin: 15px -5px 0;
+        text-align: center;
+    }
+}
 #logo-foot {
     max-width: 300px;
+    @include media-query($on-palm) {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    > a {
+        @include media-query($on-palm) {
+            width: 100%;
+        }
+    }
 }
 .footer-col {
     float: left;

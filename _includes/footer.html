@@ -1,7 +1,7 @@
 <footer class="site-footer">
 
   <div class="wrapper">
-    <div class="footer-col-wrapper">
+    <div class="footer-col-wrapper col-md-9">
       <ul class="footer-nav">
         <small class="hidden-md hidden-lg">Navigation</small>
        {% for link in site.data.navigation %}
@@ -13,21 +13,21 @@
              {% endif %}
        {% endfor %}
       </ul>
-        <div>
-          <small class="hidden-md hidden-lg">Social</small><br class="hidden-lg hidden-md">
-          <div>
-            {% include icon-twitter.html %}
-            {% include icon-facebook.html %}
-          </div>
+      <div>
+        <small class="hidden-md hidden-lg">Social</small><br class="hidden-lg hidden-md">
+        <div id="foot-icons">
+          {% include icon-twitter.html %}
+          {% include icon-facebook.html %}
         </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8"><p><small>Strategies Central Region &nbsp; | &nbsp; 4001 Mission Oaks Blvd, Suite I, Camarillo, CA 93012 &nbsp; | &nbsp; (805) 485-6114</small></p>
       </div>
-      <div class="col-md-4" id="logo-foot">
+      <address><p id="foot-text">Strategies Central Region <br />
+        4001 Mission Oaks Blvd, Suite I, Camarillo, CA 93012
+        </p>
+        </address>
+    </div>
+      <div class="col-md-3" id="logo-foot">
         <a href="http://www.familyresourcecenters.net"><img src="/assets/img/strategieslogo.png"></a>
       </div>
-    </div>
   </div>
 
 </footer>
